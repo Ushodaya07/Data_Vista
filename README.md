@@ -93,9 +93,8 @@ Make sure `sales_data.xlsx` is in the same directory and contains a `Sales` shee
 ## 📷 Preview
 
 ![image](https://github.com/user-attachments/assets/2cc33bf4-4a16-47dc-b8c5-799980a144ce)
-![image](https://github.com/user-attachments/assets/61952571-86f9-4a97-aee9-396be500714a)
+![image](https://github.com/user-attachments/assets/7d8457bf-abfb-41b7-948b-30606954d830)
 ![image](https://github.com/user-attachments/assets/02734978-4107-44b9-9b94-aef0c1110b6d)
-![image](https://github.com/user-attachments/assets/145f389a-fac7-4eaf-925d-1f99714016c9)
 ![image](https://github.com/user-attachments/assets/dc0b5c5e-ea9b-4f77-9ec9-2f69b40d60bb)
 ![image](https://github.com/user-attachments/assets/8ec952ca-a744-4d19-b933-9001ced32f6f)
 

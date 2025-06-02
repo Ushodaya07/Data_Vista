@@ -139,6 +139,47 @@ col5.metric("Total Customers", filtered_kpi_data['total_customers'])
 
 st.markdown("---")
 
+# Sales by Customer Type as Pie Chart
+st.markdown("## Sales by Customer Type")
+fig, ax = plt.subplots()
+cust_type_sales = filtered_df.groupby("Customer_type")["Total"].sum()
+colors = ['mediumseagreen', 'sandybrown']
+ax.pie(
+    cust_type_sales.values,
+    labels=cust_type_sales.index,
+    autopct='%1.1f%%',
+    colors=colors,
+    startangle=90,
+    textprops={'fontsize': 12}
+)
+ax.axis('equal')
+st.pyplot(fig)
+
+# Sales by Gender as Pie Chart
+st.markdown("## Sales by Gender")
+fig, ax = plt.subplots()
+gender_sales = filtered_df.groupby("Gender")["Total"].sum()
+colors = ['skyblue', 'lightcoral']
+ax.pie(
+    gender_sales.values, 
+    labels=gender_sales.index, 
+    autopct='%1.1f%%',  # shows percentages with 1 decimal place
+    colors=colors, 
+    startangle=90,
+    textprops={'fontsize': 12}
+)
+ax.axis('equal')  # Equal aspect ratio ensures pie is circular.
+st.pyplot(fig)
+
+# Sales by City
+st.markdown("## Sales by City")
+fig, ax = plt.subplots()
+city_sales = filtered_df.groupby("City")["Total"].sum()
+ax.bar(city_sales.index, city_sales.values, color='slateblue')
+ax.set_ylabel("Total Sales")
+st.pyplot(fig)
+
+
 # Sales by Product Line
 st.markdown("## Sales by Product Line")
 fig, ax = plt.subplots()
@@ -158,30 +199,6 @@ ax.set_xticks(hours)
 ax.set_xlabel("Hour of the Day")
 ax.set_ylabel("Sales")
 ax.set_title("Sales by Hour")
-st.pyplot(fig)
-
-# Sales by Gender
-st.markdown("## Sales by Gender")
-fig, ax = plt.subplots()
-gender_sales = filtered_df.groupby("Gender")["Total"].sum()
-ax.bar(gender_sales.index, gender_sales.values, color=['skyblue', 'lightcoral'])
-ax.set_ylabel("Total Sales")
-st.pyplot(fig)
-
-# Sales by Customer Type
-st.markdown("## Sales by Customer Type")
-fig, ax = plt.subplots()
-cust_type_sales = filtered_df.groupby("Customer_type")["Total"].sum()
-ax.bar(cust_type_sales.index, cust_type_sales.values, color=['mediumseagreen', 'sandybrown'])
-ax.set_ylabel("Total Sales")
-st.pyplot(fig)
-
-# Sales by City
-st.markdown("## Sales by City")
-fig, ax = plt.subplots()
-city_sales = filtered_df.groupby("City")["Total"].sum()
-ax.bar(city_sales.index, city_sales.values, color='slateblue')
-ax.set_ylabel("Total Sales")
 st.pyplot(fig)
 
 

@@ -96,19 +96,4 @@ Make sure `sales_data.xlsx` is in the same directory and contains a `Sales` shee
 
 ---
 
-## 🧑‍💻 Author
 
-Developed by **Ushodaya**
-
----
-
-## 📃 License
-
-This project is licensed under the MIT License.
-
-```
-
----
-
-Let me know if you want a `.md` file version or a screenshot preview for your GitHub page!
-```

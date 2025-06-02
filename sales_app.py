@@ -160,6 +160,31 @@ ax.set_ylabel("Sales")
 ax.set_title("Sales by Hour")
 st.pyplot(fig)
 
+# Sales by Gender
+st.markdown("## Sales by Gender")
+fig, ax = plt.subplots()
+gender_sales = filtered_df.groupby("Gender")["Total"].sum()
+ax.bar(gender_sales.index, gender_sales.values, color=['skyblue', 'lightcoral'])
+ax.set_ylabel("Total Sales")
+st.pyplot(fig)
+
+# Sales by Customer Type
+st.markdown("## Sales by Customer Type")
+fig, ax = plt.subplots()
+cust_type_sales = filtered_df.groupby("Customer_type")["Total"].sum()
+ax.bar(cust_type_sales.index, cust_type_sales.values, color=['mediumseagreen', 'sandybrown'])
+ax.set_ylabel("Total Sales")
+st.pyplot(fig)
+
+# Sales by City
+st.markdown("## Sales by City")
+fig, ax = plt.subplots()
+city_sales = filtered_df.groupby("City")["Total"].sum()
+ax.bar(city_sales.index, city_sales.values, color='slateblue')
+ax.set_ylabel("Total Sales")
+st.pyplot(fig)
+
+
 # Custom CSS for hiding Streamlit elements
 hide_st_style = """
             <style>
